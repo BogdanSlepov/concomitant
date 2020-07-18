@@ -28,12 +28,15 @@ body {
 }
 
 .icon-block {
+  padding: 0 10px 0 10px;
   width: 250px;
   height: 50px;
   background: #81b300;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 0 0 0 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -49,11 +52,10 @@ a {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  text-align: center;
   color: white;
-  padding: 5px 0 0 0;
-  display: inline-block;
-  margin: 10px 14px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle:hover {
@@ -61,35 +63,35 @@ a {
 }
 
 .concomitant {
-    color: #333333;
-    font-size: 36px;
-    font-weight: 400;
-    font-variant: small-caps;
-    margin: 0 0 15px 0;
+  color: #333333;
+  font-size: 36px;
+  font-weight: 400;
+  font-variant: small-caps;
+  margin: 0 0 15px 0;
 }
 
 .info-concomitant {
-    color: #999999;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 12px;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
 }
 
 .navbar {
-    list-style-type: none;
-    justify-content: flex-end;
-    margin: 0 30px 0 0;
-    display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  margin: 0 30px 0 0;
+  display: flex;
 }
 
 .navbar-link {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
 }
 
 .navbar-text {
-    color: #81b300;
+  color: #81b300;
 }
 
 .separator {
@@ -98,20 +100,20 @@ a {
 }
 
 .top-navbar {
-    display: flex;
-    list-style-type: none;
-    background: #81b300;
-    height: 70px;
-    padding: 0 30px 0 30px;
-    margin: 40px 0 0 0;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  background: #81b300;
+  height: 70px;
+  padding: 0 30px 0 30px;
+  margin: 40px 0 0 0;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .top-navbar-link {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 13px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
 }
 
 .top-navbar-text {
@@ -176,8 +178,6 @@ img {vertical-align: middle;}
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 380px;
-  padding: 3px 0 0 7px;
   color: #ffffff;
   font-weight: bold;
   font-size: 13px;
@@ -186,17 +186,20 @@ img {vertical-align: middle;}
   width: 20px;
   border-radius: 50%;
   background: #444444;
-  user-select: none;
 }
 
 /* Position the "prev button" to the left */
 .prev {
-  left: 347px;
+  left: 470px;
+  padding-top: 2px;
+  padding-left: 5px;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 347px;
+  right: 470px;
+  padding-top: 2px;
+  padding-left: 7px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -215,18 +218,20 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
+.dots-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  position: relative;
-  top: 345px;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 5px;
   background-color: #444444;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  margin-top: 3px;
 }
 
 .active, .dot:hover {
@@ -254,7 +259,7 @@ img {vertical-align: middle;}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev, .next, .text {font-size: 11px}
 }
 
 .flex-columns {
@@ -262,11 +267,13 @@ img {vertical-align: middle;}
   display: flex;
 }
 
-.flex-columns > div {
+.flex-box {
   background-color: #ffffff;
-  margin: 0 10px 10px 10px;
   padding: 20px;
   font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .photo {
@@ -295,12 +302,10 @@ img {vertical-align: middle;}
 }
 
 .flex-columns2 {
-  padding-bottom: 50px;
-}
-
-.flex-columns2 > div {
-  margin: 50px 10px 0 20px;
-  display: inline-block;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
 .imgbox {
@@ -339,11 +344,15 @@ img {vertical-align: middle;}
 
 .footer {
   display: flex;
+  justify-content: center;
   background: #4d4d4d;
   height: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .footer-box {
+  height: 170px;
   width: 200px;
   margin: auto;
 }
@@ -360,14 +369,15 @@ img {vertical-align: middle;}
   color: #a8a8a8;
   font-size: 13px;
   padding-bottom: 5px;
+  line-height: 15px;
 }
 
 .link-border {
   color: #a8a8a8;
   font-size: 12px;
   border-bottom: 1px solid #787878;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .title-info {
@@ -404,6 +414,7 @@ img {vertical-align: middle;}
   background: #2d2d2d;
   float: left;
   margin-bottom: 10px;
+  border: none;
 }
 
 .mail-info button {
@@ -415,11 +426,14 @@ img {vertical-align: middle;}
   color: #9cbd39;
   font-size: 12px;
   cursor: pointer;
+  border: none;
 }
 
 .footer-box-end {
   height: 60px;
   background: #3f3f3f;
+  display: flex;
+  justify-content: space-between;
 }
 
 .info-dev {
