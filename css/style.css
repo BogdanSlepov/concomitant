@@ -190,14 +190,14 @@ img {vertical-align: middle;}
 
 /* Position the "prev button" to the left */
 .prev {
-  left: 470px;
+  left: 570px;
   padding-top: 2px;
   padding-left: 5px;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 470px;
+  right: 570px;
   padding-top: 2px;
   padding-left: 7px;
 }
